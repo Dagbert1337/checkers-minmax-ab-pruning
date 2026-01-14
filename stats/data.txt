@@ -1,0 +1,167 @@
+
+OVERALL :
+
+WIN RATES : WHITE 0.4235555555555556 BLACK 0.45911111111111114 DRAWS 0.11733333333333333
+
+random_score RATES : WINS 0.10987654320987654 LOSES 0.9987654320987654 DRAWS 0.5555555555555556
+sum_score RATES : WINS 0.5580246913580247 LOSES 0.35802469135802467 DRAWS 0.6296296296296297
+sum_and_doubling RATES : WINS 0.6246913580246913 LOSES 0.3493827160493827 DRAWS 0.6024691358024692
+doubling_aggresive RATES : WINS 0.5506172839506173 LOSES 0.4024691358024691 DRAWS 0.608641975308642
+sum_and_backline RATES : WINS 0.608641975308642 LOSES 0.3432098765432099 DRAWS 0.6172839506172839
+
+
+Data for random_score :
+FOR DEPTH=2
+FOR COLOR=WHITE
+total wins : 21, loses:129, draws : 0
+avg game lenths : wins : 21.047619047619047, loses : 18.697674418604652, draws : 0
+rates : wins : 0.14, loses : 0.86, draws : 0.0
+FOR COLOR=BLACK
+total wins : 23, loses:127, draws : 0
+avg game lenths : wins : 20.869565217391305, loses : 20.212598425196852, draws : 0
+rates : wins : 0.15333333333333332, loses : 0.8466666666666667, draws : 0.0
+_______________________________________
+FOR DEPTH=3
+FOR COLOR=WHITE
+total wins : 10, loses:139, draws : 1
+avg game lenths : wins : 24.5, loses : 18.719424460431654, draws : 101.0
+rates : wins : 0.06666666666666667, loses : 0.9266666666666666, draws : 0.006666666666666667
+FOR COLOR=BLACK
+total wins : 16, loses:133, draws : 1
+avg game lenths : wins : 25.9375, loses : 19.842105263157894, draws : 101.0
+rates : wins : 0.10666666666666667, loses : 0.8866666666666667, draws : 0.006666666666666667
+_______________________________________
+FOR DEPTH=4
+FOR COLOR=WHITE
+total wins : 7, loses:143, draws : 0
+avg game lenths : wins : 27.142857142857142, loses : 17.74125874125874, draws : 0
+rates : wins : 0.04666666666666667, loses : 0.9533333333333334, draws : 0.0
+FOR COLOR=BLACK
+total wins : 12, loses:138, draws : 0
+avg game lenths : wins : 22.666666666666668, loses : 18.702898550724637, draws : 0
+rates : wins : 0.08, loses : 0.92, draws : 0.0
+_______________________________________
+Data for sum_score :
+FOR DEPTH=2
+FOR COLOR=WHITE
+total wins : 51, loses:70, draws : 29
+avg game lenths : wins : 22.49019607843137, loses : 28.82857142857143, draws : 101.0
+rates : wins : 0.34, loses : 0.4666666666666667, draws : 0.19333333333333333
+FOR COLOR=BLACK
+total wins : 55, loses:50, draws : 45
+avg game lenths : wins : 21.727272727272727, loses : 28.36, draws : 101.0
+rates : wins : 0.36666666666666664, loses : 0.3333333333333333, draws : 0.3
+_______________________________________
+FOR DEPTH=3
+FOR COLOR=WHITE
+total wins : 67, loses:60, draws : 23
+avg game lenths : wins : 24.119402985074625, loses : 27.6, draws : 101.0
+rates : wins : 0.44666666666666666, loses : 0.4, draws : 0.15333333333333332
+FOR COLOR=BLACK
+total wins : 96, loses:39, draws : 15
+avg game lenths : wins : 26.270833333333332, loses : 28.666666666666668, draws : 101.0
+rates : wins : 0.64, loses : 0.26, draws : 0.1
+_______________________________________
+FOR DEPTH=4
+FOR COLOR=WHITE
+total wins : 88, loses:40, draws : 22
+avg game lenths : wins : 24.818181818181817, loses : 27.45, draws : 101.0
+rates : wins : 0.5866666666666667, loses : 0.26666666666666666, draws : 0.14666666666666667
+FOR COLOR=BLACK
+total wins : 95, loses:31, draws : 24
+avg game lenths : wins : 27.28421052631579, loses : 29.741935483870968, draws : 101.0
+rates : wins : 0.6333333333333333, loses : 0.20666666666666667, draws : 0.16
+_______________________________________
+Data for sum_and_doubling :
+FOR DEPTH=2
+FOR COLOR=WHITE
+total wins : 57, loses:62, draws : 31
+avg game lenths : wins : 22.42105263157895, loses : 28.629032258064516, draws : 101.0
+rates : wins : 0.38, loses : 0.41333333333333333, draws : 0.20666666666666667
+FOR COLOR=BLACK
+total wins : 51, loses:76, draws : 23
+avg game lenths : wins : 21.019607843137255, loses : 27.026315789473685, draws : 101.0
+rates : wins : 0.34, loses : 0.5066666666666667, draws : 0.15333333333333332
+_______________________________________
+FOR DEPTH=3
+FOR COLOR=WHITE
+total wins : 98, loses:43, draws : 9
+avg game lenths : wins : 25.979591836734695, loses : 27.930232558139537, draws : 101.0
+rates : wins : 0.6533333333333333, loses : 0.2866666666666667, draws : 0.06
+FOR COLOR=BLACK
+total wins : 90, loses:46, draws : 14
+avg game lenths : wins : 23.8, loses : 28.67391304347826, draws : 101.0
+rates : wins : 0.6, loses : 0.30666666666666664, draws : 0.09333333333333334
+_______________________________________
+FOR DEPTH=4
+FOR COLOR=WHITE
+total wins : 101, loses:31, draws : 18
+avg game lenths : wins : 25.18811881188119, loses : 28.93548387096774, draws : 101.0
+rates : wins : 0.6733333333333333, loses : 0.20666666666666667, draws : 0.12
+FOR COLOR=BLACK
+total wins : 109, loses:25, draws : 16
+avg game lenths : wins : 24.01834862385321, loses : 26.44, draws : 101.0
+rates : wins : 0.7266666666666667, loses : 0.16666666666666666, draws : 0.10666666666666667
+_______________________________________
+Data for doubling_aggresive :
+FOR DEPTH=2
+FOR COLOR=WHITE
+total wins : 62, loses:70, draws : 18
+avg game lenths : wins : 23.774193548387096, loses : 26.82857142857143, draws : 101.0
+rates : wins : 0.41333333333333333, loses : 0.4666666666666667, draws : 0.12
+FOR COLOR=BLACK
+total wins : 59, loses:75, draws : 16
+avg game lenths : wins : 22.76271186440678, loses : 28.30666666666667, draws : 101.0
+rates : wins : 0.3933333333333333, loses : 0.5, draws : 0.10666666666666667
+_______________________________________
+FOR DEPTH=3
+FOR COLOR=WHITE
+total wins : 76, loses:50, draws : 24
+avg game lenths : wins : 25.80263157894737, loses : 29.6, draws : 101.0
+rates : wins : 0.5066666666666667, loses : 0.3333333333333333, draws : 0.16
+FOR COLOR=BLACK
+total wins : 78, loses:48, draws : 24
+avg game lenths : wins : 24.564102564102566, loses : 29.541666666666668, draws : 101.0
+rates : wins : 0.52, loses : 0.32, draws : 0.16
+_______________________________________
+FOR DEPTH=4
+FOR COLOR=WHITE
+total wins : 77, loses:44, draws : 29
+avg game lenths : wins : 27.207792207792206, loses : 31.0, draws : 101.0
+rates : wins : 0.5133333333333333, loses : 0.29333333333333333, draws : 0.19333333333333333
+FOR COLOR=BLACK
+total wins : 94, loses:39, draws : 17
+avg game lenths : wins : 26.393617021276597, loses : 26.846153846153847, draws : 101.0
+rates : wins : 0.6266666666666667, loses : 0.26, draws : 0.11333333333333333
+_______________________________________
+Data for sum_and_backline :
+FOR DEPTH=2
+FOR COLOR=WHITE
+total wins : 53, loses:62, draws : 35
+avg game lenths : wins : 22.830188679245282, loses : 27.806451612903224, draws : 101.0
+rates : wins : 0.35333333333333333, loses : 0.41333333333333333, draws : 0.23333333333333334
+FOR COLOR=BLACK
+total wins : 67, loses:55, draws : 28
+avg game lenths : wins : 22.08955223880597, loses : 28.90909090909091, draws : 101.0
+rates : wins : 0.44666666666666666, loses : 0.36666666666666664, draws : 0.18666666666666668
+_______________________________________
+FOR DEPTH=3
+FOR COLOR=WHITE
+total wins : 97, loses:40, draws : 13
+avg game lenths : wins : 25.876288659793815, loses : 28.925, draws : 101.0
+rates : wins : 0.6466666666666666, loses : 0.26666666666666666, draws : 0.08666666666666667
+FOR COLOR=BLACK
+total wins : 89, loses:44, draws : 17
+avg game lenths : wins : 25.640449438202246, loses : 32.0, draws : 101.0
+rates : wins : 0.5933333333333334, loses : 0.29333333333333333, draws : 0.11333333333333333
+_______________________________________
+FOR DEPTH=4
+FOR COLOR=WHITE
+total wins : 88, loses:50, draws : 12
+avg game lenths : wins : 24.625, loses : 29.58, draws : 101.0
+rates : wins : 0.5866666666666667, loses : 0.3333333333333333, draws : 0.08
+FOR COLOR=BLACK
+total wins : 99, loses:27, draws : 24
+avg game lenths : wins : 24.92929292929293, loses : 27.555555555555557, draws : 101.0
+rates : wins : 0.66, loses : 0.18, draws : 0.16
+_______________________________________

@@ -1,107 +1,100 @@
-# KNSI GOLEM Template Repository
-[![Flake8 Linting](https://github.com/Dnafivuq/golem_template/actions/workflows/lint.yml/badge.svg)](https://github.com/Dnafivuq/golem_template/actions/workflows/lint.yml)
-[![Pytest](https://github.com/Dnafivuq/golem_template/actions/workflows/test.yml/badge.svg)](https://github.com/Dnafivuq/golem_template/actions/workflows/test.yml)
-<a target="_blank" href="https://cookiecutter-data-science.drivendata.org/">
-    <img src="https://img.shields.io/badge/CCDS-Project%20template-328F97?logo=cookiecutter" />
-</a>
+# Checkers minmax with alpha beta pruning
 
+### Author(s): Dagobert Kluczny, Jan Fronczek
 
-Template repository for KNSI GOLEM python projects made from the [cookiecutter data science template](https://github.com/drivendataorg/cookiecutter-data-science).
+## Overview
+This repository contains the implementation of a classic 8x8 Checkers game. The project focuses on creating a clean graphical interface using Pygame and developing an advanced AI opponent powered by the Minimax algorithm with Alpha-Beta pruning and Zobrist hashing.
 
-This repository's goal is to provide out-of-the-box boilerplate code with a clean project file structure.
-Additionally, the template includes a GitHub CI pipeline with pytest and flake8 checks implemented.
+## Features/Functionalities
+Key points of what exactly users can do or achieve from our repository:
+* **Graphical Interface:** Clean visualization of the board, pieces, and game status using `pygame`.
+* **Advanced AI:** Implementation of Minimax with Alpha-Beta pruning and Zobrist Hashing for memory optimization.
+* **Configurable Heuristics:** Multiple AI strategies including Aggressive Doubling, Sum & Backline, and Material Advantage.
+* **Difficulty Levels:** Adjustable search depths (Easy, Medium, Hard).
+* **Console Mode:** Separate mode for algorithm simulation and testing.
 
+## Installation & Setup
+To get started with this project, follow these steps:
 
-You are free to delete any unnecessary folders and files. However, it is recommended to maintain the overall file structure to ensure clean code and compatibility with other KNSI GOLEM repositories.
-## What is here?
-### Code and Files Structure
-To ensure a transparent and easily understandable file structure for external users each module, from making plots to training models, is given its respective file in the `src` folder. A full description of the file structure is provided in the [Project Organization](#project-organization) section.
+1. **Clone the repository**
+   git clone https://github.com/Dagbert1337/checkers-minmax-ab-pruning.git
+   cd checkers-minmax-ab-pruning
 
+2. **Set up a virtual environment** (Recommended)
+   `python -m venv venv`
+   `source venv/bin/activate`  # On Windows use `venv\Scripts\activate`
 
-**How to run code in repository?**
-```bash
-python3 -m src.dataset
-```
-### Readme
-Another goal of this repository is to provide a [template README](/TEMPLATE_README.md) that can be easily edited and adapted. The README serves as a foundation to help users create their own well-structured documentation, ensuring consistency across all projects within our repository.
+3. **Install dependencies**
+   Ensure you have Python 3.10+ installed.
+   pip install -r requirements.txt
 
-## Additional tips and info
-To further help with development, it is recommended to use useful tools for managing dependencies and environment configurations.
-### venv
-Python's `venv` allows you to easily manage isolated environments for your projects, enabling you to work with specific module/library versions or even different Python versions without conflicting with the globally installed Python interpreter.
+## Usage
 
+1. **Play GUI Mode**
+   Run the graphical interface to play against the AI:
+   `python3 ui.py`
 
-How to use:
-```bash
-python3 -m venv .venv  # Create venv  
-source .venv/bin/activate  # Activate venv  
-pip install -r requirements.txt  # Install requirements to venv  
-```
-Basic Python libraries like pytest are already included in the requirements.
+   * **Select Difficulty:** Press 1 (Easy), 2 (Medium), or 3 (Hard).
+   * **Side Selection:** By default, you play as White (Bottom). To play as Black, change 'w' to 'b' in line 308 of `ui.py`.
 
----
+2. **Run Simulation**
+   Run the console-based engine for Bot vs. Bot or text-based Human vs. Bot games:
+   `python3 simulation.py`
 
-### dotenv
-The dotenv library allows you to define environment constants or secrets, such as API keys, in a single place. It simplifies the management of environment variables by letting you configure them in a `.env` file.
+3. **Analyze/Benchmark AI**
+   Run the experimental tournament script to benchmark different heuristics against each other:
+   Uncomment run_experiment() in arena.py main block first
+   `python3 arena.py`
 
+   This generates a `statistics.json` file containing win/loss rates and average game lengths.
 
-The `python-dotenv` library has already been added to the requirements.
+## Examples
 
-**.env file example:**
-```bash
-API_KEY = "KNSI_GOLEM_API_KEY"
-```
+**Input System**
+This game uses a text-based input system for precision within the GUI. The board uses English Draughts notation (0-31 indexing).
 
-**python code example:**
-```python
-from dotenv import load_dotenv
-import os
+To move a piece, type your move in the `start.end` format and press Enter:
 
-load_dotenv()
+* **Standard Move:** To move from square 9 to 13:
+    9.13
 
-api_key = os.getenv("API_KEY")
-```
+* **Attacking Move:** To jump from 18 to 14 (capturing a piece):
+    18.14
+    (Note: Enter the target square, not the square after the target).
+
+## Additional Resources
+* **Heuristics Explained:**
+    * `sum_score`: Material advantage (White pieces - Black pieces).
+    * `sum_and_backline`: Material score + bonuses for guarding the "King's row".
+    * `sum_and_doubling`: Material score + rewards for diagonal adjacency (defensive walls).
+    * `doubling_aggresive`: Balances defensive structure with aggressive forward movement.
+* **Rules:** Mandatory jumps are enforced. If a capture is available, the game rejects non-capturing moves.
 
 ## Project Organization
 
-```
 ├── README.md          <- The top-level README for developers using this project.
-├── data
-│   ├── external       <- Data from third party sources.
-│   ├── interim        <- Intermediate data that has been transformed.
-│   ├── processed      <- The final, canonical data sets for modeling.
-│   └── raw            <- The original, immutable data dump.
 │
-├── docs               <- Project's docs
+├── requirements.txt   <- The requirements file (Pygame).
 │
-├── models             <- Trained and serialized models, model predictions, or model summaries
-│
-├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-│                         the creator's initials, and a short `-` delimited description, e.g.
-│                         `1.0-jqp-initial-data-exploration`.
-│
-├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-│   └── figures        <- Generated graphics and figures to be used in reporting
-│
-├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-│                         generated with `pip freeze > requirements.txt`
-│
-├── setup.cfg          <- Configuration file for flake8 and pytest
+├── docs    <- Project's docs
+│   │   
+│   ├── black_on_white_violence.png   <- Charts comparing which color wins more often.
+│   │   
+│   ├── data.txt                      <- Remade statistics.json.
+│   │   
+│   ├── depth_on_win_influence.png    <- Charts showing how winratio changes with depth.
+│   │   
+│   ├── heuristic_performance.png     <- Charts showing which algorithms wins more often.
+│   │   
+│   └── statistics.json               <- Output file generated by arena.py (after running experiments).s
 │
 └── src   <- Source code for use in this project.
+    ├── arena.py           <- Script for benchmarking and data manipulation.
     │
-    ├── __init__.py             <- Makes src a Python module
+    ├── classes.py         <- Core logic.
     │
-    ├── config.py               <- Store useful variables and configuration
+    ├── simulation.py      <- Entry point for terminal-based simulation.
     │
-    ├── dataset.py              <- Scripts to download or generate data
+    ├── draw.py            <- Draws charts based on heuristics matchup outcomes.
     │
-    ├── features.py             <- Code to create features for modeling
-    │
-    ├── modeling                
-    │   ├── __init__.py 
-    │   ├── predict.py          <- Code to run model inference with trained models          
-    │   └── train.py            <- Code to train models
-    │
-    └── plots.py                <- Code to create visualizations
-```
+    └── gui.py             <- Entry point for the GUI, handling rendering and input loops.
